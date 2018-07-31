@@ -12,7 +12,6 @@ public class RepeatingBackground : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         backgroundHorizontalLength = spriteRenderer.bounds.size.x;
-        Debug.Log(backgroundHorizontalLength);
     }
 
     private void Update()
@@ -30,8 +29,8 @@ public class RepeatingBackground : MonoBehaviour
 
     private void RepositionBackground(bool forward)
     {
-        Vector2 groundOffSet = new Vector2(backgroundHorizontalLength * 2f, 0);
+        Vector3 groundOffSet = new Vector3(backgroundHorizontalLength * 2f, 0, 0);
         if (!forward) groundOffSet *= -1;
-        transform.position = (Vector2)transform.position + groundOffSet;
+        transform.position = transform.position + groundOffSet;
     }
 }
