@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     public float moveForce = 365f;
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
+    public SpriteRenderer bodyRenderer;
+    public Sprite oneBiteSprite;
+    public Sprite twoBiteSprite;
     //public Transform groundCheck;
 
     private bool grounded = true;
@@ -14,11 +17,14 @@ public class PlayerController : MonoBehaviour
     private bool lying = false;
     private Animator anim;
     private Rigidbody2D rb2d;
+    private LayerMask platformLayer;
+    private int bites = 0;
 
-    void Awake()
+    void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        platformLayer = LayerMask.NameToLayer("Platform");
     }
 
     void Update()
@@ -37,6 +43,15 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!grounded)
+        {
+            RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, Vector2.down, .5f, 1 << platformLayer);
+            if (hit.collider != null)
+            {
+                grounded = true;
+            }
+        }
+
         float h = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(h));
 
@@ -62,6 +77,28 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
+            grounded = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            bites += 1;
+            Debug.Log(bites);
+            switch (bites)
+            {
+                case 1:
+                    bodyRenderer.sprite = oneBiteSprite;
+                    break;
+                case 2:
+                    bodyRenderer.sprite = twoBiteSprite;
+                    break;
+                default:
+                    Die();
+                    break;
+            }
         }
     }
 
@@ -86,5 +123,10 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, t);
             yield return null;
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("Died :(");
     }
 }
