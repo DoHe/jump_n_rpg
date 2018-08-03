@@ -4,16 +4,20 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public float moveForce = 365f;
+    public float maxTorque = 120f;
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
+    public float rotateLift = 5f;
+    public float groundedRotateForce = 80f;
+    public float airborneRotateForce = 40f;
     public SpriteRenderer bodyRenderer;
     public Sprite oneBiteSprite;
     public Sprite twoBiteSprite;
-    //public Transform groundCheck;
 
     private bool grounded = true;
     private bool facingRight = true;
     private bool jump = false;
+    private bool rotate = false;
     private bool lying = false;
     private Animator anim;
     private Rigidbody2D rb2d;
@@ -29,31 +33,35 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         if (Input.GetButtonDown("Jump") && grounded && !lying)
         {
             jump = true;
-        }
-
-        if (Input.GetButtonDown("Fire1") && grounded)
-        {
-            StartCoroutine("RotateMe");
         }
     }
 
     void FixedUpdate()
     {
-        if (!grounded)
-        {
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, Vector2.down, .5f, 1 << platformLayer);
-            if (hit.collider != null)
-            {
-                grounded = true;
-            }
-        }
+        RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, Vector2.down, .5f, 1 << platformLayer);
+        grounded = hit.collider != null;
 
-        float h = Input.GetAxis("Horizontal");
-        anim.SetFloat("Speed", Mathf.Abs(h));
+        float horizontalAxis = Input.GetAxis("Horizontal");
+        anim.SetFloat("Speed", Mathf.Abs(horizontalAxis));
+
+        if (horizontalAxis > 0 && !facingRight)
+            Flip();
+        else if (horizontalAxis < 0 && facingRight)
+            Flip();
+
+        float strength = grounded ? groundedRotateForce : airborneRotateForce;
+        float rotation = facingRight ? -strength : strength;
+
+        float fireAxis = Input.GetAxis("Fire1");
+        if (grounded)
+            rb2d.AddForce(Vector2.up * fireAxis * rotateLift);
+        rb2d.AddTorque(fireAxis * rotation);
+        if (Mathf.Abs(rb2d.angularVelocity) > maxTorque)
+            rb2d.angularVelocity = maxTorque;
+        rotate = false;
 
         lying = transform.rotation.eulerAngles.z > 45 && transform.rotation.eulerAngles.z < 315;
         if (lying)
@@ -61,16 +69,11 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (h * rb2d.velocity.x < maxSpeed)
-            rb2d.AddForce(Vector2.right * h * moveForce);
+        if (horizontalAxis * rb2d.velocity.x < maxSpeed)
+            rb2d.AddForce(Vector2.right * horizontalAxis * moveForce);
 
         if (Mathf.Abs(rb2d.velocity.x) > maxSpeed)
             rb2d.velocity = new Vector2(Mathf.Sign(rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
-
-        if (h > 0 && !facingRight)
-            Flip();
-        else if (h < 0 && facingRight)
-            Flip();
 
         if (jump)
         {
@@ -86,7 +89,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             bites += 1;
-            Debug.Log(bites);
             switch (bites)
             {
                 case 1:
@@ -115,7 +117,7 @@ public class PlayerController : MonoBehaviour
         Quaternion startRotation = transform.rotation;
         int rotation = facingRight ? -90 : 90;
         Quaternion endRotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, rotation));
-        float rate = 1.0f / 0.5f;
+        float rate = 3f;
         float t = 0.0f;
         while (t < 1.0f)
         {
