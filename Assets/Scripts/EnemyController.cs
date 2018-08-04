@@ -34,4 +34,24 @@ public class EnemyController : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    public void Hit()
+    {
+        StartCoroutine("Disappear");
+        Destroy(gameObject, 1f);
+    }
+
+    public IEnumerator Disappear()
+    {
+        Vector3 startScale = transform.localScale;
+        float rate = 3f;
+        float t = 0.0f;
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime * rate;
+            transform.localScale = Vector3.Slerp(startScale, Vector3.zero, t);
+            yield return null;
+        }
+    }
 }
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="56.603191mm"
+   height="27.332163mm"
+   viewBox="0 0 56.603191 27.332163"
+   version="1.1"
+   id="svg4938"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="cloud1.svg">
+  <defs
+     id="defs4932" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="-11.607489"
+     inkscape:cy="-4.1299921"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4935">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.656737,-126.85178)">
+    <g
+       id="g1047"
+       transform="matrix(0.35277777,0,0,-0.35277777,118.25993,140.36634)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\cloud2.png"
+       inkscape:export-xdpi="66.910179"
+       inkscape:export-ydpi="66.910179">
+      <path
+         d="m 0,0 c 0,8.229 -5.653,15.121 -13.282,17.051 -4.091,7.926 -12.343,13.355 -21.878,13.355 -3.469,0 -6.768,-0.726 -9.762,-2.021 -5.203,6.067 -12.908,9.924 -21.526,9.924 -8.78,0 -16.626,-3.993 -21.829,-10.258 -1.165,0.174 -2.348,0.294 -3.56,0.294 -8.254,0 -15.532,-4.178 -19.838,-10.531 -2.647,1.455 -5.686,2.286 -8.92,2.286 -8.643,0 -15.884,-5.919 -17.946,-13.918 -12.136,-0.229 -21.909,-10.12 -21.909,-22.311 0,-12.334 9.998,-22.333 22.333,-22.333 6.048,0 11.526,2.415 15.548,6.32 3.105,-4.193 8.073,-6.923 13.69,-6.923 4.824,0 9.171,2.013 12.272,5.234 3.322,-3.296 7.895,-5.337 12.946,-5.337 6.064,0 11.426,2.95 14.774,7.479 4.212,-4.371 10.114,-7.101 16.663,-7.101 6.182,0 11.783,2.437 15.936,6.384 3.311,-2.355 7.35,-3.752 11.722,-3.752 11.195,0 20.272,9.075 20.272,20.271 0,1.354 -0.14,2.675 -0.393,3.954 C -1.786,-8.794 0,-4.61 0,0"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path1049"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

@@ -3,10 +3,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveForce = 365f;
+    public float moveForce = 80f;
+    public float minTorque = 300f;
     public float maxTorque = 120f;
     public float maxSpeed = 5f;
-    public float jumpForce = 1000f;
+    public float jumpForce = 400f;
     public float rotateLift = 5f;
     public float groundedRotateForce = 80f;
     public float airborneRotateForce = 40f;
@@ -88,6 +89,11 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            if (Mathf.Abs(rb2d.angularVelocity) > minTorque)
+            {
+                other.gameObject.GetComponent<EnemyController>().Hit();
+                return;
+            }
             bites += 1;
             switch (bites)
             {
@@ -104,27 +110,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            Debug.Log("You won!");
+        }
+    }
+
     void Flip()
     {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-    }
-
-    public IEnumerator RotateMe()
-    {
-        Quaternion startRotation = transform.rotation;
-        int rotation = facingRight ? -90 : 90;
-        Quaternion endRotation = transform.rotation * Quaternion.Euler(new Vector3(0, 0, rotation));
-        float rate = 3f;
-        float t = 0.0f;
-        while (t < 1.0f)
-        {
-            t += Time.deltaTime * rate;
-            transform.rotation = Quaternion.Slerp(startRotation, endRotation, t);
-            yield return null;
-        }
     }
 
     void Die()
