@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="163.57869"
+   height="67.292671"
+   viewBox="0 0 43.280194 17.80452"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="bee_body.svg"
+   inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee_body.png"
+   inkscape:export-xdpi="58"
+   inkscape:export-ydpi="58">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="63.506952"
+     inkscape:cy="43.53029"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.3321033,-261.10351)">
+    <ellipse
+       style="opacity:1;fill:#ffd42a;fill-opacity:1;stroke:#000000;stroke-width:0.43200001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path10"
+       cx="25.925144"
+       cy="270.00577"
+       rx="19.377041"
+       ry="8.6862593"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 14.835565,262.93488 v 14.17411"
+       id="path853"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 16.961681,262.27342 v 15.35529"
+       id="path855"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 61.031707,125.39058 c -1.227679,-0.33163 -2.714286,-0.75109 -3.303572,-0.93211 l -1.071428,-0.32913 V 97.99392 71.858504 l 0.714285,-0.250296 c 0.392858,-0.137662 1.799108,-0.532752 3.125,-0.877978 1.325893,-0.345225 2.55134,-0.667968 2.723215,-0.717207 0.296672,-0.08499 0.3125,1.331024 0.3125,27.958222 0,15.426265 -0.06027,28.042025 -0.133929,28.035035 -0.07366,-0.007 -1.138393,-0.28406 -2.366071,-0.6157 z"
+       id="path895"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <ellipse
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.75011629;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path897"
+       cx="11.221169"
+       cy="268.88803"
+       rx="1.9434345"
+       ry="1.6363287"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 45.215402,268.51003 4.362656,1.16897"
+       id="path899"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 49.578058,269.679 -4.386902,1.17547"
+       id="path909"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 172.00325,97.820441 c -0.007,-1.677053 -0.10159,-2.755005 -0.30522,-3.490275 -0.16204,-0.585105 -0.25938,-1.099068 -0.21631,-1.142142 0.10138,-0.101371 13.29999,3.424177 13.29999,3.552627 0,0.05349 -1.90849,0.606773 -4.24107,1.229516 -2.33259,0.622743 -5.20536,1.389763 -6.38393,1.70449 l -2.14286,0.572233 z"
+       id="path911"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20.977678,261.65921 v 16.72545"
+       id="path913"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 23.387276,261.42298 v 17.19791"
+       id="path915"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 86.031707,129.47308 c -0.34375,-0.0331 -1.549107,-0.14377 -2.678572,-0.24592 -1.129464,-0.10215 -2.395089,-0.23204 -2.8125,-0.28865 l -0.758928,-0.10293 V 97.973945 67.112305 l 0.758928,-0.100011 c 0.916602,-0.120788 3.784759,-0.395659 5.803572,-0.556186 l 1.473214,-0.117144 v 31.625729 31.625727 l -0.580357,-0.0286 c -0.319196,-0.0157 -0.861607,-0.0557 -1.205357,-0.0888 z"
+       id="path917"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 26.411086,261.28124 v 17.43415"
+       id="path919"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 28.678944,261.32848 V 278.5264"
+       id="path921"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 32.411458,261.75371 v 16.44196"
+       id="path923"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 34.017857,262.17893 v 15.7805"
+       id="path925"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 36.899926,262.84039 v 14.22135"
+       id="path927"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 38.931548,263.50185 v 12.89843"
+       id="path929"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 100.31742,97.975361 V 65.997498 l 2.63393,0.106131 c 1.44866,0.05837 3.13616,0.149962 3.75,0.203533 l 1.11607,0.0974 v 31.576899 31.576899 l -1.47321,0.0992 c -0.81027,0.0545 -2.49777,0.14339 -3.75,0.19743 l -2.27679,0.0983 z"
+       id="path931"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 122.99599,97.983172 v -29.95265 l 2.36607,0.418245 c 1.30134,0.230035 2.42634,0.420298 2.5,0.422807 0.0737,0.0025 0.13393,13.092506 0.13393,29.088882 v 29.084324 l -0.66964,0.10892 c -0.3683,0.0599 -1.4933,0.26039 -2.5,0.44552 l -1.83036,0.3366 z"
+       id="path933"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29156354;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 139.96028,97.967322 V 72.051705 l 0.48624,0.122039 c 0.51783,0.129967 4.5683,1.577214 5.54054,1.979655 l 0.58036,0.240228 v 23.584959 23.584964 l -0.49107,0.1953 c -1.20798,0.48041 -5.18116,1.8962 -5.625,2.00439 l -0.49107,0.1197 z"
+       id="path935"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.08332)"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 8.4099701,267.4706 4.8010659,-2.1292"
+       id="path981"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="D:\Crap\Unity Projects\Jump n RPG\Assets\Sprites\bee.png"
+       inkscape:export-xdpi="58.871075"
+       inkscape:export-ydpi="58.871075" />
+  </g>
+</svg>
