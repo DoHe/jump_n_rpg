@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer bodyRenderer;
     public Sprite oneBiteSprite;
     public Sprite twoBiteSprite;
+    public Sprite threeBiteSprite;
 
     private bool grounded = true;
     private bool facingRight = true;
     private bool jump = false;
     private bool rotate = false;
     private bool lying = false;
+    private bool dead = false;
     private Animator anim;
     private Rigidbody2D rb2d;
     private LayerMask platformLayer;
@@ -42,6 +44,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (dead)
+        {
+            return;
+        }
         RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, Vector2.down, .5f, 1 << platformLayer);
         grounded = hit.collider != null;
 
@@ -87,6 +93,10 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (dead)
+        {
+            return;
+        }
         if (other.gameObject.CompareTag("Enemy"))
         {
             if (Mathf.Abs(rb2d.angularVelocity) > minTorque)
@@ -104,6 +114,7 @@ public class PlayerController : MonoBehaviour
                     bodyRenderer.sprite = twoBiteSprite;
                     break;
                 default:
+                    bodyRenderer.sprite = threeBiteSprite;
                     Die();
                     break;
             }
@@ -112,7 +123,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Goal"))
+        if (!dead && other.gameObject.CompareTag("Goal"))
         {
             Debug.Log("You won!");
         }
@@ -128,6 +139,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Died :(");
+        dead = true;
+        anim.SetTrigger("Die");
     }
 }
