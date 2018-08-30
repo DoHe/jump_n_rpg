@@ -4,13 +4,14 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public float moveForce = 80f;
-    public float minTorque = 300f;
+    public float minTorque = 50f;
     public float maxTorque = 120f;
     public float maxSpeed = 5f;
     public float jumpForce = 400f;
     public float rotateLift = 5f;
     public float groundedRotateForce = 80f;
     public float airborneRotateForce = 40f;
+    public float enemyPushBackFoce = 300f;
     public SpriteRenderer bodyRenderer;
     public Sprite oneBiteSprite;
     public Sprite twoBiteSprite;
@@ -21,17 +22,18 @@ public class PlayerController : MonoBehaviour
     private bool jump = false;
     private bool rotate = false;
     private bool lying = false;
-    private bool dead = false;
     private Animator anim;
     private Rigidbody2D rb2d;
     private LayerMask platformLayer;
     private int bites = 0;
+    private GameController gameController;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         platformLayer = LayerMask.NameToLayer("Platform");
+        gameController = GameObject.FindWithTag("GameMaster").GetComponent<GameController>();
     }
 
     void Update()
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (dead)
+        if (!GameController.gameRunning)
         {
             return;
         }
@@ -68,7 +70,6 @@ public class PlayerController : MonoBehaviour
         rb2d.AddTorque(fireAxis * rotation);
         if (Mathf.Abs(rb2d.angularVelocity) > maxTorque)
             rb2d.angularVelocity = maxTorque;
-        rotate = false;
 
         lying = transform.rotation.eulerAngles.z > 45 && transform.rotation.eulerAngles.z < 315;
         if (lying)
@@ -93,25 +94,28 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (dead)
+        if (!GameController.gameRunning)
         {
             return;
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (Mathf.Abs(rb2d.angularVelocity) > minTorque)
+            if (Mathf.Abs(rb2d.angularVelocity) > minTorque && Input.GetAxis("Fire1") == 1f)
             {
                 other.gameObject.GetComponent<EnemyController>().Hit();
                 return;
             }
+            Vector2 pushBackForce = transform.position.x > other.transform.position.x ? Vector2.right : Vector2.left;
             bites += 1;
             switch (bites)
             {
                 case 1:
                     bodyRenderer.sprite = oneBiteSprite;
+                    rb2d.AddForce(pushBackForce * enemyPushBackFoce);
                     break;
                 case 2:
                     bodyRenderer.sprite = twoBiteSprite;
+                    rb2d.AddForce(pushBackForce * enemyPushBackFoce);
                     break;
                 default:
                     bodyRenderer.sprite = threeBiteSprite;
@@ -123,9 +127,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!dead && other.gameObject.CompareTag("Goal"))
+        if (GameController.gameRunning && other.gameObject.CompareTag("Goal"))
         {
-            Debug.Log("You won!");
+            gameController.EndLevel(gameObject, true);
         }
     }
 
@@ -139,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        dead = true;
+        gameController.EndLevel(gameObject, false);
         anim.SetTrigger("Die");
     }
 }
