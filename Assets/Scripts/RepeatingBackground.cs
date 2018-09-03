@@ -3,8 +3,7 @@ using System.Collections;
 
 public class RepeatingBackground : MonoBehaviour
 {
-    public GameObject player;
-
+    private GameObject player;
     private SpriteRenderer spriteRenderer;
     private float backgroundHorizontalLength;
 
@@ -12,6 +11,7 @@ public class RepeatingBackground : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         backgroundHorizontalLength = spriteRenderer.bounds.size.x;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()

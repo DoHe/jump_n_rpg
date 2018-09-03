@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class BeeController : EnemyController
 {
-    public GameObject player;
     public float triggerDistance = 5.5f;
     public float deleteDistance = 8f;
 
     private bool seen = false;
+    private GameObject player;
 
     new void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         base.Start();
     }
 

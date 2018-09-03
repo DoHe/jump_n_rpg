@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject player;
     public static bool gameRunning = true;
     public Text endMessage;
 
+    private GameObject player;
     private GameObject curtain = null;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         StartLevel();
     }
 
@@ -59,5 +61,14 @@ public class GameController : MonoBehaviour
             endMessage.text = "You lost :(";
         }
         endMessage.enabled = true;
+        StartCoroutine("LoadNextLevel");
+    }
+
+    public IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        gameRunning = true;
+        yield return null;
     }
 }
